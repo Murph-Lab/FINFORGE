@@ -76,11 +76,11 @@ FINFORGE/
 
 ## Build Phases
 
-**Phase 1 — Environment Setup** ✅ Complete
+**Phase 1 — Environment Setup**  Complete
 
 Established isolated forensic lab VM, installed all forensic tools, configured Python environment and libraries on host machine.
 
-**Phase 2 — Scenario Design** 🔄 In Progress
+**Phase 2 — Scenario Design**  In Progress
 
 Developing fictional financial crime case brief including suspect profile, alleged offenses, and investigation scope.
 
