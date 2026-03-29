@@ -64,24 +64,13 @@ Inside the VM, installed the following tools with default settings:
 
 **Step 6 — Python Environment (Host Machine)**
 
-Confirmed Python 3.14 installed on host. Installed required libraries via pip:
+Confirmed Python 3.14 installed on host. Installed required libraries via pip: python-registry, jinja2, and volatility3.
 
-```
-pip install python-registry jinja2
-pip install volatility3
-```
-
-Note: `prefetch-parser` skipped due to `libscca-python` build failure requiring Microsoft C++ Build Tools. Prefetch parsing will be handled via an alternative method in Phase 4.
+Note: prefetch-parser skipped due to libscca-python build failure requiring Microsoft C++ Build Tools. Prefetch parsing will be handled via an alternative method in Phase 4.
 
 **Step 7 — Volatility3 Verification**
 
-Confirmed Volatility3 2.27.0 operational via full executable path:
-
-```
-C:\Users\tomem\AppData\Local\Python\pythoncore-3.14-64\Scripts\vol.exe -h
-```
-
-Full plugin list confirmed. Note: `vol.exe` not added to PATH successfully — use full path for all Volatility commands.
+Confirmed Volatility3 2.27.0 installed and operational. Full plugin list verified including all Windows, Linux, and Mac memory forensics modules. Note: vol.exe not added to system PATH — full executable path used for all Volatility commands.
 
 ---
 
@@ -106,4 +95,3 @@ Full plugin list confirmed. Note: `vol.exe` not added to PATH successfully — u
 ## Phase 1 Status: Complete
 
 All tools confirmed installed and operational. Environment is ready for Phase 2 — Case Scenario Design.
-
