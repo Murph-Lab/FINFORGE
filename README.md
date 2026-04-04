@@ -110,4 +110,4 @@ No forensic image files are stored in this repository due to size constraints. S
 
 ## About
 
-Built as part of a cybersecurity portfolio while completing a Bachelor of Interdisciplinary Studies with certificates in Cybersecurity, Data Analytics, and Group Communication & Leadership. Career focus: digital forensics, with a long-term target in financial crime investigation.nd Group Communication & Leadership. Career focus: digital forensics, with a long-term target in crime investigation.
+Built as part of a cybersecurity portfolio while completing a Bachelor of Interdisciplinary Studies with certificates in Cybersecurity, Data Analytics, and Group Communication & Leadership. Career focus: digital forensics, with a long-term target in financial crime investigation.
