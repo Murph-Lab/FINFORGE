@@ -92,22 +92,33 @@ Confirmed Volatility3 2.27.0 installed and operational. Full plugin list verifie
 
 ---
 
+## Phase 1 Status: Complete
+
 FINFORGE — Project Build Log
 Phase: 2 — Scenario Design
 Status: Complete
 Date: April 2026
+
 Objective
 Design the fictional financial crime case scenario, select and verify the forensic evidence image, and produce all Phase 2 documentation.
+
 Work Completed
+
 Step 1 — Evidence Image Selection
 Selected the NIST CFReDS Data Leakage Case as the forensic image source. Chosen for its insider threat scenario, Windows 7 workstation image, and artifact categories directly relevant to the FINFORGE investigation scope (browser history, LNK files, USB artifacts, prefetch, MFT timeline).
+
 Source: https://cfreds-archive.nist.gov/data_leakage_case/data-leakage-case.html
+
 Step 2 — Evidence Image Acquisition
+
 Downloaded the PC DD image (three compressed .7z parts, total 5.05 GB compressed). Extracted using 7-Zip to produce cfreds_2015_data_leakage_pc.dd (approximately 20 GB extracted).
+
 Step 3 — Hash Verification
 Loaded the extracted DD image in FTK Imager 4.7 and ran hash verification. SHA1 generated: afe5c9ab487bd47a8a9856b1371c2384d44fd7. Note: NIST's published hash list covers the compressed .7z parts only, not the extracted .dd file. No read errors reported on load.
+
 Step 4 — Shared Folder Configuration
 Configured a read-only shared folder in VirtualBox to make the evidence image accessible from inside the FINFORGE-Lab VM without copying the file into the VM or modifying it. This preserves forensic integrity throughout analysis.
+
 Step 5 — Documentation Produced
 Three documents written and pushed to the GitHub repository:
 
@@ -117,7 +128,5 @@ resources/evidence_sources.md — evidence provenance record including source, f
 
 Phase 2 Status: Complete
 Forensic image acquired and verified. Case scenario designed. All Phase 2 documentation committed to GitHub. Environment is ready for Phase 3 — Manual Investigation.
-
-## Phase 1 Status: Complete
 
 All tools confirmed installed and operational. Environment is ready for Phase 2 — Case Scenario Design.
