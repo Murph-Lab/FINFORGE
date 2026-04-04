@@ -80,11 +80,11 @@ FINFORGE/
 
 Established isolated forensic lab VM, installed all forensic tools, configured Python environment and libraries on host machine.
 
-**Phase 2 — Scenario Design**  In Progress
+**Phase 2 — Scenario Design**  Complete
 
 Developing fictional financial crime case brief including suspect profile, alleged offenses, and investigation scope.
 
-**Phase 3 — Manual Investigation**
+**Phase 3 — Manual Investigation** In Progress
 
 Conducting artifact analysis on forensic image using Autopsy and FTK Imager. Documenting findings across browser history, prefetch files, LNK files, USB artifacts, and file system timeline.
 
