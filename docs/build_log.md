@@ -100,7 +100,7 @@ Source: https://cfreds-archive.nist.gov/data_leakage_case/data-leakage-case.html
 Downloaded the PC DD image (three compressed .7z parts, total 5.05 GB compressed). Extracted using 7-Zip to produce cfreds_2015_data_leakage_pc.dd (approximately 20 GB extracted).
 
 **Step 3 — Hash Verification**
-Loaded the extracted DD image in FTK Imager 4.7 and ran hash verification. SHA1 generated: afe5c9ab487bd47a8a9856b1371c2384d44fd7. Note: NIST's published hash list covers the compressed .7z parts only, not the extracted .dd file. No read errors reported on load.
+Loaded the extracted DD image in FTK Imager 4.7 and ran hash verification. SHA1 generated: afe5c9ab487bd47a8a9856b1371c2384d44fd785. Note: NIST's published hash list covers the compressed .7z parts only, not the extracted .dd file. No read errors reported on load.
 
 **Step 4 — Shared Folder Configuration**
 Configured a read-only shared folder in VirtualBox to make the evidence image accessible from inside the FINFORGE-Lab VM without copying the file into the VM or modifying it. This preserves forensic integrity throughout analysis.
