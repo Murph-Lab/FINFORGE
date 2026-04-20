@@ -84,11 +84,11 @@ Established isolated forensic lab VM, installed all forensic tools, configured P
 
 Developing fictional financial crime case brief including suspect profile, alleged offenses, and investigation scope.
 
-**Phase 3 — Manual Investigation** In Progress
+**Phase 3 — Manual Investigation** Complete 
 
 Conducting artifact analysis on forensic image using Autopsy and FTK Imager. Documenting findings across browser history, prefetch files, LNK files, USB artifacts, and file system timeline.
 
-**Phase 4 — Python Triage Tool**
+**Phase 4 — Python Triage Tool** In progress
 
 Building `triage_generator.py` — a command-line tool that automates artifact collection from a forensic image and outputs a structured HTML triage report using Jinja2 templates.
 
