@@ -86,7 +86,7 @@ Developing fictional financial crime case brief including suspect profile, alleg
 
 **Phase 3 — Manual Investigation** Complete 
 
-Conducting artifact analysis on forensic image using Autopsy and FTK Imager. Documenting findings across browser history, prefetch files, LNK files, USB artifacts, and file system timeline.
+Conducted artifact analysis on forensic image using Autopsy and FTK Imager. Documenting findings across browser history, prefetch files, LNK files, USB artifacts, and file system timeline.
 
 **Phase 4 — Python Triage Tool** In progress
 
