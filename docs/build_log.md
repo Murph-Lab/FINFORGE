@@ -113,3 +113,45 @@ Three documents written and pushed to the GitHub repository:
 
 **Phase 2 Status: Complete**
 Forensic image acquired and verified. Case scenario designed. All Phase 2 documentation committed to GitHub. Environment is ready for Phase 3 — Manual Investigation.
+
+
+
+## Phase 3 — Manual Investigation
+
+**Status:** Complete
+**Date:** April 2026
+
+### Objective
+
+Conduct a full manual artifact investigation of the NIST CFReDS Data Leakage forensic image using Autopsy 4.22.1. Document findings across five artifact categories, establish a chronological activity timeline, and produce professional findings documentation suitable for inclusion in the Phase 5 case report.
+
+### Work Completed
+
+**Autopsy Case Setup**
+Created FINFORGE-Investigation case in Autopsy 4.22.1 on the FINFORGE-Lab VM. Evidence image loaded via read-only VirtualBox shared folder (Z: drive) to preserve forensic integrity. Time zone set to America/New_York. Ingest modules run: Recent Activity, Hash Lookup, File Type Identification. Ingest complete — do not re-run.
+
+**Artifact Category 1 — Browser History**
+63 web search queries and 1,611 URL visits recovered across Chrome, Edge, and IE. Key findings: suspect researched data exfiltration methods, CD burning, cloud storage options, and forensic investigation methodology on 2015-03-23. Visited ForensicsWiki anti-forensic techniques page twice, FBI Intellectual Property Theft page, Google Drive download page, and iCloud control panel setup on the same date. Searched for CCleaner and Eraser on 2015-03-25. Full findings in `investigation/artifact_findings/browser_history.md`.
+
+**Artifact Category 2 — USB Device Artifacts**
+16 entries recovered. After deduplication (live SYSTEM hive + RegBack backup), two forensically significant devices identified: SanDisk Cruzer Fit #1 (4C530012450531101593, connected 2015-03-24 06:38 PDT) and SanDisk Cruzer Fit #2 (4C530012550531106501, connected 2015-03-24 12:38 PDT). Both connected the day after browser exfiltration research. Full findings in `investigation/artifact_findings/usb_artifacts.md`.
+
+**Artifact Category 3 — LNK Files and Shellbags**
+46 LNK entries and 118 shellbag entries recovered. LNK files confirm confidential project files accessed from E:\ removable drive and \\10.11.11.128\secured_drive network share on 2015-03-23, including pricing decisions, design concepts, and a final meeting presentation. Shellbags confirm systematic folder navigation through Secret Project Data subfolders on E:\ drive on 2015-03-24. Google Drive folder present in shellbags on 2015-03-25. All activity attributed to "informant" user account. Full findings in `investigation/artifact_findings/lnk_files.md`.
+
+**Artifact Category 4 — Prefetch Files**
+95 entries recovered. Seven forensically significant: Eraser installed and executed (x2) at 08:13, CCleaner installed and executed (x2) at 08:15, CCleaner immediately uninstalled at 08:18, GoogleDriveSync executed at 08:21 — all on 2015-03-25 morning in a 31-minute window. Immediate CCleaner uninstallation after execution confirms deliberate attempt to remove evidence of evidence destruction. Full findings in `investigation/artifact_findings/prefetch_analysis.md`.
+
+**Artifact Category 5 — MFT Timeline**
+109,724 file system events analyzed across March 22–25, 2015. MFT corroborates and sequences all prior artifact findings at the file level. Full Eraser and CCleaner installation footprints confirmed via file creation events. CCleaner licensing server contact confirmed. Recycle Bin deletions timed to Eraser execution. Outlook OST file modified during anti-forensic window. Google Drive sync active immediately following cleanup sequence. Full findings in `investigation/artifact_findings/timeline.md`.
+
+### Key Decisions
+
+- Concept-first approach maintained throughout: each artifact category explained at a technical level before any Autopsy work began
+- Evidentiary gap documented: no artifact category directly captures file copy operations — cannot prove with certainty what files left the machine
+- CSV exports saved for all five artifact categories following naming convention: `FINFORGE_[ArtifactCategory]_[YYYYMMDD].csv`
+- MFT export handled via Autopsy Timeline keyword filtering and Snapshot Report (109,724 events not suitable for direct CSV export)
+
+### Phase 3 Status: Complete
+
+All five artifact categories investigated and documented. Case narrative established across the full March 22–25 activity window. Ready for Phase 4 — Python Triage Tool.
