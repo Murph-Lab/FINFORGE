@@ -25,7 +25,7 @@ A mid-level employee at a fictional wealth management firm is suspected of submi
 
 ## Project Goals
 
-- Demonstrate hands-on proficiency with industry forensic tools: Autopsy, FTK Imager, Volatility3, and Wireshark
+- Demonstrate hands-on proficiency with industry forensic tools: Autopsy, FTK Imager
 - Build a functional Python tool that automates artifact parsing and generates structured triage reports
 - Produce professional documentation modeled after real consulting firm deliverables
 - Create a forensics-specific portfolio piece targeting financial crime investigation roles
